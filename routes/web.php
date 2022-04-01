@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('form');
+})->name('form');
+
+Route::get('/completed', function () {
+    return view('completed');
+})->name('completed');
