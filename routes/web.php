@@ -1,5 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
+use App\Http\Controllers\LyricsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('form');
-})->name('form');
+Route::get('/', [LyricsController::class, 'index'])->name('form');
 
-Route::get('/completed', function () {
-    return view('completed');
-})->name('completed');
+Route::get('/completed', [LyricsController::class, 'completed'])->name('completed');
