@@ -5,19 +5,19 @@ declare(strict_types=1);
 namespace Database\Seeders;
 
 use App\Models\Lyric;
-use Database\Seeders\LyricSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class LyricSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run(): void
     {
-        $this->call([LyricSeeder::class]);
+        // Lyric::factory(3)->create();
+        // このファイル無くてもseeder通った？ → 未確認・・。
     }
 }
